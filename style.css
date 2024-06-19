@@ -468,3 +468,41 @@ a{
     max-width: 100%;
   }
 }
+
+/*Mensaje*/
+/* Estilo */
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #888;
+  background-color: white;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo fondo */
+.popup-background {
+  display: none; 
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Boton*/
+.close-btn {
+  float: right;
+  cursor: pointer;
+  padding: 5px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
