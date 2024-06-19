@@ -1,0 +1,266 @@
+/*fondo*/
+body {
+  margin: 0;
+  /*overflow: hidden;*/
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  animation: twinkle 0.5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 6;
+  }
+}
+  
+/*planeta*/
+.container {
+    height: 500px;
+    width: 500px;
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 10%;
+    transform: rotateX(40deg);
+    transform-origin: center;
+    perspective: 500px;
+  }
+  
+  .sun {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 15px white;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+  }
+
+  .globe.mercury{
+    background-color: #c0c0c0;
+    height: 6px;
+    right: 12px;
+    top: 10px;
+    width: 6px;
+  }
+
+  .globe.venus{
+    background-color: #ffcc66;
+    height: 10px;
+    right: 16px;
+    top: 17px;
+    width: 10px;
+  }
+  
+  .globe.earth {
+    background-color: aqua;
+    height: 15px;
+    right: 17px;
+    top: 24px;
+    width: 15px;
+  }
+  
+  .globe.moon {
+    width: 6px;
+    height: 6px;
+    background: #d6d6d6;
+    right: 1px;
+    top: 4px;
+  }
+
+  .globe.mars{
+    background-color: #ff6666;
+    height: 13px;
+    right: 35px;
+    top: 37px;
+    width: 13px;
+  }
+
+  .globe.jupiter{
+    background-color: #ffcc00;
+    height: 20px;
+    right: 40px;
+    top: 55px;
+    width: 20px;
+  }
+
+  .globe.saturn{
+    background-color: #ff9933;
+    height: 20px;
+    right: 55px;
+    top: 70px;
+    width: 20px;
+  }
+
+  .globe.uranus{
+    background-color: #66ccff;
+    height: 17px;
+    right: 80px;
+    top: 77px;
+    width: 17px;
+  }
+
+  .globe.neptune{
+    background-color: #3366ff;
+    height: 17px;
+    right: 90px;
+    top: 97px;
+    width: 17px;
+  }
+
+  .globe.pluto{
+    background-color: #999999;
+    height: 6px;
+    right: 112px;
+    top: 115px;
+    width: 6px;
+  }
+  
+  .globe {
+    border-radius: 25px;
+    position: absolute;
+  }
+
+  .orbit.mercury{
+    position: relative;
+    animation: orbit 10.25s linear infinite;
+    height: 100px;
+    left: 50px;
+    top: 50px;
+    width: 100px;
+  }
+
+  .orbit.venus{
+    position: relative;
+    animation: orbit 15.25s linear infinite;
+    height: 150px;
+    left: 30px;
+    top: -70px;
+    width: 150px;
+  }
+  
+  .orbit.earth {
+    position: relative;
+    animation: orbit 18.25s linear infinite;
+    height: 200px;
+    left: 10px;
+    top: -245px;
+    width: 200px;
+  }
+  
+  .orbit.moon {
+    animation: orbit 1.35s linear infinite;
+    height: 40px;
+    left: -12.5px;
+    top: -12.5px;
+    width: 40px;
+  }
+
+  .orbit.mars{
+    position: relative;
+    animation: orbit 25.25s linear infinite;
+    height: 300px;
+    left: -40px;
+    top: -500px;
+    width: 300px;
+  }
+
+  .orbit.jupiter{
+    position: relative;
+    animation: orbit 35.25s linear infinite;
+    height: 400px;
+    left: -80px;
+    top: -850px;
+    width: 400px;
+  }
+
+  .orbit.saturn{
+    position: relative;
+    animation: orbit 40.25s linear infinite;
+    height: 500px;
+    left: -130px;
+    top: -1300px;
+    width: 500px;
+  }
+
+  .orbit.uranus{
+    position: relative;
+    animation: orbit 45.25s linear infinite;
+    height: 600px;
+    left: -170px;
+    top: -1850px;
+    width: 600px;
+  }
+
+  .orbit.neptune{
+    position: relative;
+    animation: orbit 50.25s linear infinite;
+    height: 700px;
+    left: -220px;
+    top: -2500px;
+    width: 700px;
+  }
+
+  .orbit.pluto{
+    position: relative;
+    animation: orbit 55.25s linear infinite;
+    height: 800px;
+    left: -270px;
+    top: -3250px;
+    width: 800px;
+  }
+  
+  .orbit {
+    position: relative;
+    border: solid;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 1px 1px 0 0;
+    box-sizing: border-box;
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .centro {
+    z-index: 1;
+    width: 70%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    }

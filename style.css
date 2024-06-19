@@ -1,0 +1,470 @@
+/*fondo*/
+body {
+    margin: 0;
+    /*overflow: hidden;*/
+  }
+  
+  #stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+    animation: twinkle 0.5s infinite;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 6;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 6;
+    }
+  }
+
+/*planetas*/
+.container {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    margin-left: 40%;
+    margin-top: 17%;
+    transform: rotateX(40deg);
+    transform-origin: center;
+    perspective: 500px;
+  }
+  
+  .sun {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 15px white;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+  }
+
+  .globe.mercury{
+    background-color: #c0c0c0;
+    height: 6px;
+    right: 12px;
+    top: 10px;
+    width: 6px;
+  }
+
+  .globe.venus{
+    background-color: #ffcc66;
+    height: 10px;
+    right: 16px;
+    top: 17px;
+    width: 10px;
+  }
+  
+  .globe.earth {
+    background-color: aqua;
+    height: 15px;
+    right: 17px;
+    top: 24px;
+    width: 15px;
+  }
+  
+  .globe.moon {
+    width: 6px;
+    height: 6px;
+    background: #d6d6d6;
+    right: 1px;
+    top: 4px;
+  }
+
+  .globe.mars{
+    background-color: #ff6666;
+    height: 13px;
+    right: 35px;
+    top: 37px;
+    width: 13px;
+  }
+
+  .globe.jupiter{
+    background-color: #ffcc00;
+    height: 20px;
+    right: 40px;
+    top: 55px;
+    width: 20px;
+  }
+
+  .globe.saturn{
+    background-color: #ff9933;
+    height: 20px;
+    right: 55px;
+    top: 70px;
+    width: 20px;
+  }
+
+  .globe.uranus{
+    background-color: #66ccff;
+    height: 17px;
+    right: 80px;
+    top: 77px;
+    width: 17px;
+  }
+
+  .globe.neptune{
+    background-color: #3366ff;
+    height: 17px;
+    right: 90px;
+    top: 97px;
+    width: 17px;
+  }
+
+  .globe.pluto{
+    background-color: #999999;
+    height: 6px;
+    right: 112px;
+    top: 115px;
+    width: 6px;
+  }
+  
+  .globe {
+    border-radius: 25px;
+    position: absolute;
+  }
+
+  .orbit.mercury{
+    position: relative;
+    animation: orbit 10.25s linear infinite;
+    height: 100px;
+    left: 50px;
+    top: 50px;
+    width: 100px;
+  }
+
+  .orbit.venus{
+    position: relative;
+    animation: orbit 15.25s linear infinite;
+    height: 150px;
+    left: 30px;
+    top: -70px;
+    width: 150px;
+  }
+  
+  .orbit.earth {
+    position: relative;
+    animation: orbit 18.25s linear infinite;
+    height: 200px;
+    left: 10px;
+    top: -245px;
+    width: 200px;
+  }
+  
+  .orbit.moon {
+    animation: orbit 1.35s linear infinite;
+    height: 40px;
+    left: -12.5px;
+    top: -12.5px;
+    width: 40px;
+  }
+
+  .orbit.mars{
+    position: relative;
+    animation: orbit 25.25s linear infinite;
+    height: 300px;
+    left: -40px;
+    top: -500px;
+    width: 300px;
+  }
+
+  .orbit.jupiter{
+    position: relative;
+    animation: orbit 35.25s linear infinite;
+    height: 400px;
+    left: -80px;
+    top: -850px;
+    width: 400px;
+  }
+
+  .orbit.saturn{
+    position: relative;
+    animation: orbit 40.25s linear infinite;
+    height: 500px;
+    left: -130px;
+    top: -1300px;
+    width: 500px;
+  }
+
+  .orbit.uranus{
+    position: relative;
+    animation: orbit 45.25s linear infinite;
+    height: 600px;
+    left: -170px;
+    top: -1850px;
+    width: 600px;
+  }
+
+  .orbit.neptune{
+    position: relative;
+    animation: orbit 50.25s linear infinite;
+    height: 700px;
+    left: -220px;
+    top: -2500px;
+    width: 700px;
+  }
+
+  .orbit.pluto{
+    position: relative;
+    animation: orbit 55.25s linear infinite;
+    height: 800px;
+    left: -270px;
+    top: -3250px;
+    width: 800px;
+  }
+  
+  .orbit {
+    position: relative;
+    border: solid;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 1px 1px 0 0;
+    box-sizing: border-box;
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/*central*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .centro {
+    z-index: 1;
+    width: 70%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    }
+
+/*Menu*/
+#Menu{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 87.5%;
+    width: 100%;
+    z-index: 1000;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+}
+
+ul li a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 2px;
+    background-color: #3d3d3d;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+ul li a:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 2px;
+    background-color: #3d3d3d;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+ul li a:hover{
+    color: #3d3d3d;
+}
+
+ul li a:hover:before, ul li a:hover:after{
+    transform: scaleX(1);
+}
+
+/*Principal*/
+#IMGPRE{
+    height: 30%;
+    width: 30%;
+    border-radius: 10%;
+    margin-left: 35%;
+}
+
+.CPR{
+  font-size: 20px;
+  margin-left: 25%;
+}
+
+.CPR2{
+  font-size: 20px;
+  margin-left: 28%;
+}
+
+/*acerca de*/
+.PAC{
+  font-size: 30px;
+}
+
+.P2CAC{
+  font-size: 15px;
+}
+
+#P2PE{
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.P2CPE{
+  font-size: 15px;
+}
+
+#P2I{
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+#P2II{
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+#P2FC{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+#P2IFC{
+  font-size: 15px;
+  margin-top: -20px;
+}
+
+#P2HA{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+#P2IHA{
+  font-size: 15px;
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.IMGLP{
+  height: 80px;
+  padding: 10%;
+}
+
+div p, div img{
+  margin: 0 10px;
+}
+
+#P2IFC{
+  margin-top: 10px;
+}
+
+/*Experiencia*/
+.P3CE{
+  font-size: 30px;
+}
+
+#P3LA{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+#P3LAF{
+  font-size: 20px;
+}
+
+.P3LAP{
+  font-size: 15px;
+}
+
+#FRA{
+  border-bottom: 5px solid gray;
+  margin-top: 10px;
+}
+
+.P3EP{
+  font-size: 15px;
+}
+
+/*Contacto*/
+.P4C{
+  font-size: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20%;
+}
+
+/*movil*/
+@media only screen and (max-width:600px){
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
