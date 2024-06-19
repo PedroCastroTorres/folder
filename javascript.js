@@ -23,3 +23,20 @@ function createStars() {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+// Función para mostrar la ventana
+  function mostrarPopup() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('popup-background').style.display = 'block';
+}
+
+    // Función para ocultar la ventana
+  function ocultarPopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('popup-background').style.display = 'none';
+}
+
+    // Mostrar cuando la página cargue
+    window.onload = function() {
+      mostrarPopup();
+};
